@@ -1,11 +1,11 @@
 
 # LLaMA-3 ReFT Model Fine-Tuning Example
 
-This project demonstrates how to fine-tune the LLaMA-3 8B model using ReFT (Rank-efficient Finetuning) for intervention-based tuning. The code guides you through loading the model, setting up ReFT configuration, and training it on a few-shot dataset.
+This project demonstrates how to fine-tune the LLaMA-3 8B model using ReFT (Rank-efficient Finetuning) for intervention-based tuning. The code guides us through loading the model, setting up ReFT configuration, and training it on a few-shot dataset.
 
 ## Installation
 
-1. Ensure that you have the required libraries installed. If not, the code will install them for you:
+1. Ensuring that we have the required libraries installed. If not, the code will install them for us:
     - `pyreft`: Used for ReFT fine-tuning.
     - `transformers`: HuggingFace's transformer library.
     - `huggingface_hub`: For authentication and loading models from HuggingFace.
@@ -18,7 +18,7 @@ This project demonstrates how to fine-tune the LLaMA-3 8B model using ReFT (Rank
         !pip install git+https://github.com/stanfordnlp/pyreft.git
     ```
 
-2. You will also need to log in to your HuggingFace account to access gated models such as LLaMA-3. You can do so using:
+2. We would also need to log in to your HuggingFace account to access gated models such as LLaMA-3. We can do so using:
     ```python
     from huggingface_hub import notebook_login
     notebook_login()
@@ -91,7 +91,7 @@ trainer.train()
 
 ## Chat with Your ReFT Model
 
-After training, you can interact with your fine-tuned model by providing an instruction. Here's an example where the model is asked about dog breeds:
+After training, we can interact with our fine-tuned model by providing an instruction. Here's an example where the model is asked about dog breeds:
 
 ```python
 instruction = "Which dog breed do people think is cuter, poodle or doodle?"
@@ -120,7 +120,7 @@ reft_model.save(
 )
 ```
 
-To load the saved ReFT model in the future, you can do:
+To load the saved ReFT model in the future, we can do:
 
 ```python
 reft_model = pyreft.ReftModel.load(
